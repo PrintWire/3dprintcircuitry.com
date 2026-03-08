@@ -1,0 +1,214 @@
+baseURL = "https://3dprintcircuitry.com/"
+languageCode = "en-us"
+title = "3D Print Circuitry"
+theme = "printwire"
+
+[params]
+tagline       = "Additive Electronics — From Trace to Device."
+description   = "3D Print Circuitry — additively manufactured circuitry and embedded electronics. 3D printed PCBs, multi-layer conductive traces, embedded passive components, and conformal electronics for IoT, wearables, and aerospace."
+keywords      = "3D printed electronics, additive electronics manufacturing, printed PCB, aerosol jet printing, conductive ink, embedded components, conformal electronics, IoT prototyping, flexible circuits, printed sensors"
+logoEmoji     = "⚡"
+contactEmail  = "maxdavisgroup@gmail.com"
+ogImage       = "https://images.unsplash.com/photo-1648815546030-6a5792d4fa38?w=1200&q=80"
+footerServicesLabel = "Services"
+
+colorPrimary      = "#00d9ff"
+colorPrimaryDark  = "#00a8cc"
+colorPrimaryLight = "#33e4ff"
+colorBgDark       = "#050714"
+colorBgSection    = "#080c1e"
+colorBgCard       = "#0d1228"
+colorBgCardHover  = "#121832"
+colorBorder       = "rgba(0,217,255,0.18)"
+colorBorderLight  = "rgba(0,217,255,0.08)"
+
+fontPrimary   = "Orbitron"
+fontSecondary = "Space+Grotesk"
+
+pubmedQuery        = "printed+electronics+additive+manufacturing+conductive+ink+circuitry"
+pubmedFallback     = "printed+electronics+additive+manufacturing"
+newsFallbackImages = [
+  "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&q=80",
+  "https://images.unsplash.com/photo-1580584126903-c17d41830450?w=600&q=80",
+  "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
+]
+
+heroEyebrow  = "Printed Electronics & Additive Circuitry"
+heroTitle    = "3D Print <em>Circuitry</em>"
+heroSubtitle = "Additive electronics manufacturing for custom circuits and embedded components. 3D printed PCBs, multi-layer conductive traces, and fully embedded passive components — from prototype to small-volume production."
+heroCta1Text = "Explore Services"
+heroCta1URL  = "/services/"
+heroCta2Text = "Get a Quote"
+heroCta2URL  = "/contact/"
+heroImage    = "https://images.unsplash.com/photo-1648815546030-6a5792d4fa38?w=1200&q=80"
+
+newsSectionTitle    = "Latest in Printed & Additive Electronics"
+newsSectionSubtitle = "Research and industry news from the printed electronics, additive circuitry, and conductive ink manufacturing field."
+
+overviewLabel   = "Conductive Materials"
+overviewTitle   = "Printable Electronics Materials"
+overviewText    = "Electrical performance depends on the ink. Our material portfolio covers signal, power, and sensing applications across the full spectrum of substrate types — rigid, flexible, and 3D-formed."
+overviewText2   = "Silver nanoparticle ink at 4 µΩ·cm. Solderable copper nanoparticle ink. PEDOT:PSS for transparent flexible electrodes. Stretchable conductor for epidermal electronics."
+overviewImage   = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+overviewBtnText = "View Services"
+overviewBtnURL  = "/services/"
+
+applicationsLabel = "Applications"
+applicationsTitle = "Electronics Printing Use Cases"
+
+servicesLabel    = "What We Offer"
+servicesTitle    = "Electronics Printing Services"
+servicesSubtitle = "From a single prototype PCB to conformal antennas on production housings — additive electronics at every scale."
+
+clusterLabel = "PrintWire Network"
+clusterTitle = "Related 3D Printing Resources"
+
+newsletterTitle = "Printed Electronics Updates"
+newsletterText  = "New conductive materials, process breakthroughs, and additive electronics research — delivered monthly."
+
+ctaTitle   = "Print Your Circuit"
+ctaText    = "From a single prototype PCB to a conformal antenna on a product housing — if it's electronic and it can be printed, we can build it."
+ctaImage   = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
+ctaBtnText = "Start Your Project"
+ctaBtnURL  = "/contact/"
+
+# ── Array tables ──────────────────────────────────────────────────────
+
+[[params.stats]]
+count  = 50
+suffix = "µm"
+label  = "Min Trace Width"
+
+[[params.stats]]
+count  = 16
+suffix = ""
+label  = "Conductive Layers"
+
+[[params.stats]]
+count  = 24
+suffix = "hr"
+label  = "Prototype Turnaround"
+
+[[params.stats]]
+count  = 38
+suffix = "B+"
+label  = "Market by 2030 (USD)"
+
+[[params.applications]]
+title       = "IoT & Sensor Devices"
+description = "Custom sensor integration with antennas, power traces, and digital logic on a single printed substrate. No standard PCB layout constraints."
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+
+[[params.applications]]
+title       = "Wearables & Body Electronics"
+description = "Flexible and stretchable circuits conforming to body geometry. Biosensing electrodes, ECG patches, and motion sensors printed on wearable substrates."
+image       = "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&q=80"
+
+[[params.applications]]
+title       = "Aerospace & Defence"
+description = "Conformal antennas on aerodynamic surfaces. Weight-optimised circuits with embedded passives eliminating discrete component mass."
+image       = "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80"
+
+[[params.applications]]
+title       = "Medical Devices"
+description = "Biocompatible printed circuits for implantable and disposable diagnostic devices. Single-use biosensor arrays and lab-on-chip substrates."
+image       = "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&q=80"
+
+[[params.servicesPreview]]
+icon        = "🖨️"
+title       = "3D Printed PCBs"
+description = "Aerosol jet and inkjet-printed conductive traces. Multi-layer boards with blind and buried vias — no drilling, no etching."
+
+[[params.servicesPreview]]
+icon        = "⚙️"
+title       = "Embedded Components"
+description = "Resistors, capacitors, and inductors printed directly into the substrate. Component values tunable post-print via laser trimming."
+
+[[params.servicesPreview]]
+icon        = "🌀"
+title       = "Conformal Electronics"
+description = "Circuits on curved, flexible, and 3D-formed substrates. Antennas on product surfaces, strain sensors on structural geometry."
+
+[[params.servicesPreview]]
+icon        = "🔬"
+title       = "Printed Sensors"
+description = "Custom piezoresistive, capacitive, and electrochemical sensors printed to specification. Rapid iteration from schematic to functional device."
+
+[[params.services]]
+name        = "3D Printed PCBs"
+description = "Aerosol jet and inkjet-printed conductive traces on flat and 3D substrates. Silver nanoparticle ink at 4–6 µΩ·cm. Multi-layer boards with blind/buried vias — no drilling, no etching."
+icon        = "🖨️"
+image       = "https://images.unsplash.com/photo-1636297912648-505ff0b94ccb?w=800&q=80"
+
+[[params.services]]
+name        = "Embedded Component Printing"
+description = "Resistors, capacitors, and inductors printed directly into the circuit substrate. Eliminates discrete component placement for space-constrained IoT and wearable designs."
+icon        = "⚙️"
+image       = "https://images.unsplash.com/photo-1689961476752-cc6cc3a02f86?w=800&q=80"
+
+[[params.services]]
+name        = "Conformal & 3D Electronics"
+description = "Circuits on curved, flexible, and 3D-formed substrates. Antennas on product housing, strain sensors on structural geometry, biosensing electrodes on wearable forms."
+icon        = "🌀"
+image       = "https://images.unsplash.com/photo-1738162837438-92ff852619a1?w=800&q=80"
+
+[[params.services]]
+name        = "Printed Sensors"
+description = "Custom sensor arrays from piezoresistive carbon ink, PEDOT:PSS electrodes, and stretchable conductors. Functional from schematic to tested device in 24 hours."
+icon        = "🔬"
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+
+[[params.clusterLinks]]
+name        = "3dprinttissue.com"
+url         = "https://3dprinttissue.com"
+description = "Bioprinting & biosensor research"
+
+[[params.clusterLinks]]
+name        = "dmls3d.com"
+url         = "https://dmls3d.com"
+description = "Metal 3D printing & DMLS"
+
+[[params.clusterLinks]]
+name        = "3dprintsolar.com"
+url         = "https://3dprintsolar.com"
+description = "Printed solar & clean energy"
+
+[[params.clusterLinks]]
+name        = "sendcutship.com"
+url         = "https://sendcutship.com"
+description = "Custom manufacturing services"
+
+[[params.clusterLinks]]
+name        = "metalpowder.co"
+url         = "https://metalpowder.co"
+description = "Conductive metal powders & AM"
+
+[[menu.main]]
+name   = "Home"
+url    = "/"
+weight = 1
+
+[[menu.main]]
+name   = "About"
+url    = "/about/"
+weight = 2
+
+[[menu.main]]
+name   = "Articles"
+url    = "/articles/"
+weight = 3
+
+[[menu.main]]
+name   = "Services"
+url    = "/services/"
+weight = 4
+
+[[menu.main]]
+name   = "Contact"
+url    = "/contact/"
+weight = 5
+
+[[menu.main]]
+name   = "Advertise"
+url    = "/advertise/"
+weight = 6
