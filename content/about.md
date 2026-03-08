@@ -9,7 +9,7 @@ storyText:
   - "3D Print Circuitry is the authoritative resource for additive electronics manufacturing — covering aerosol jet printing, inkjet deposition, and embedded component printing from research to production."
   - "We track every development across conductive ink formulation, substrate engineering, and multi-layer printed circuit fabrication — covering the transition from conventional PCB manufacturing to fully additive processes."
   - "Our coverage spans IoT prototyping, wearable biosensors, aerospace conformal antennas, and medical diagnostic devices — wherever printed electronics are pushing the boundary of what a circuit can be."
-storyImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+storyImage: "/images/03_active_print.png"
 
 missionCards:
   - icon: "⚡"
