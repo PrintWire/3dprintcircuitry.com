@@ -212,3 +212,8 @@ weight = 5
 name   = "Advertise"
 url    = "/advertise/"
 weight = 6
+
+[[menu.main]]
+name   = "3D Viewer"
+url    = "/viewer.html"
+weight = 99
