@@ -1,11 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Printed Electronics Research &amp; News on 3D Print Circuitry</title>
-    <link>https://3dprintcircuitry.com/articles/</link>
-    <description>Recent content in Printed Electronics Research &amp; News on 3D Print Circuitry</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <atom:link href="https://3dprintcircuitry.com/articles/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Printed Electronics Research &amp; News on 3D Print Circuitry</title><link>https://3dprintcircuitry.com/articles/</link><description>Recent content in Printed Electronics Research &amp; News on 3D Print Circuitry</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 24 Jun 2026 06:03:16 -0600</lastBuildDate><atom:link href="https://3dprintcircuitry.com/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>From PCBs to RFID: How 3D Printing Conductive Circuits IoT RFID Applications Are Embedding Electronics into Parts</title><link>https://3dprintcircuitry.com/articles/3d-printing-conductive-circuits-iot-rfid/</link><pubDate>Wed, 24 Jun 2026 06:03:16 -0600</pubDate><guid>https://3dprintcircuitry.com/articles/3d-printing-conductive-circuits-iot-rfid/</guid><description>&lt;p>The traditional path from mechanical part to smart component involves two separate worlds: a machinist produces the housing, an electronics engineer designs the PCB, and an assembler bolts them together. &lt;strong>3D printing conductive circuits IoT RFID&lt;/strong> systems is beginning to collapse that boundary — not by replacing electronics entirely, but by printing traces, antennas, and sensors directly into or onto a part during fabrication.&lt;/p>
+&lt;p>This isn&amp;rsquo;t speculative. Working RFID antennas, resistive heating elements, capacitive sensors, and IoT antenna structures are being produced today using a combination of conductive filaments, silver-loaded inks, and multi-material additive processes. The engineering tradeoffs are real, and the applications where this approach makes sense are becoming clearer.&lt;/p></description></item></channel></rss>
