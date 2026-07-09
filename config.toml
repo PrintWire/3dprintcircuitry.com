@@ -19,7 +19,7 @@ description   = "3D Print Circuitry — additive manufacturing for electronics, 
 keywords      = "3D printed electronics, additive electronics, printed PCB, aerosol jet printing, conductive ink, embedded components, conformal electronics, printed antennas, printed sensors"
 logoEmoji     = "⚡"
 contactEmail  = "maxdavisgroup@gmail.com"
-ogImage       = "/images/03_antenna.png"
+ogImage       = "/images/c02_rf_antenna.png"
 footerServicesLabel = "Suppliers"
 
 [[menu.main]]
