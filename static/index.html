@@ -82,36 +82,10 @@
 
     <div class="ed-section-label">
       Analysis &amp; Deep Dives
-      <a href="#">View All &rarr;</a>
+      <a href="/articles/">View All &rarr;</a>
     </div>
-    <div class="ed-list">
-      <article class="ed-list-item">
-        <img src="images/ci02_conductive.png" alt="Printed heatsink">
-        <div>
-          <span class="ed-badge">Thermal</span>
-          <div class="ed-card-meta">June 24, 2026 · 9 min read</div>
-          <h3><a href="#">Printed Heatsinks: Lattice Geometry Beats Extruded Aluminum</a></h3>
-          <p class="ed-card-excerpt">Topology-optimized, additively manufactured heatsinks are outperforming machined baselines on watts-per-gram — and fitting geometry that extrusion never could.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/ci03_flex_pcb.png" alt="Printed coil former">
-        <div>
-          <span class="ed-badge">Power</span>
-          <div class="ed-card-meta">June 20, 2026 · 7 min read</div>
-          <h3><a href="#">Custom Coil Formers and Bobbins Without Tooling</a></h3>
-          <p class="ed-card-excerpt">Short-run power electronics teams are printing bobbins, coil formers, and creepage barriers to spec — skipping the injection-mold lead time entirely.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/ci04_antenna.png" alt="Printed PCB structure">
-        <div>
-          <span class="ed-badge">Conductive</span>
-          <div class="ed-card-meta">June 18, 2026 · 10 min read</div>
-          <h3><a href="#">Multi-Material Printing Puts Traces Inside the Part</a></h3>
-          <p class="ed-card-excerpt">Co-deposited conductive ink and dielectric are turning structural parts into circuits — embedding interconnect where a board and a housing used to be two components.</p>
-        </div>
-      </article>
+    <div class="ed-list" id="pwDeepDives">
+      <div style="padding:1.5rem;color:var(--text-faint);">Loading analysis…</div>
     </div>
 
     <div class="ed-section-label">
@@ -421,6 +395,31 @@ document.querySelector('.ed-nav-toggle')?.addEventListener('click', () => {
       ? top.map(card).join('')
       : '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-faint);">Unable to load news.</div>';
   }
+})();
+
+// -- Analysis & Deep Dives: PrintWire catalog in list format --
+(function(){
+  var box = document.getElementById('pwDeepDives');
+  if (!box) return;
+  function esc(s){var d=document.createElement('div');d.appendChild(document.createTextNode(s==null?'':s));return d.innerHTML;}
+  var empty = '<div style="padding:1.5rem;color:var(--text-faint);">In-depth analysis and deep dives are on the way — check back soon.</div>';
+  fetch('network.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : []; })
+    .then(function(items){
+      items = (items || []).slice();
+      items.sort(function(a,b){ return (b.iso||'').localeCompare(a.iso||''); });
+      if (!items.length){ box.innerHTML = empty; return; }
+      box.innerHTML = items.slice(0,8).map(function(a){
+        var img = a.img ? '<img src="'+esc(a.img)+'" alt="" loading="lazy">' : '';
+        var meta = esc(a.date||'') + (a.origin ? ' · '+esc(a.origin) : '');
+        return '<article class="ed-list-item">'+img+'<div>'+
+          '<div class="ed-card-meta">'+meta+'</div>'+
+          '<h3><a href="'+esc(a.url)+'">'+esc(a.title)+'</a></h3>'+
+          '<p class="ed-card-excerpt">'+esc(a.summary||'')+'</p>'+
+          '</div></article>';
+      }).join('');
+    })
+    .catch(function(){ box.innerHTML = empty; });
 })();
 </script>
 </body>
