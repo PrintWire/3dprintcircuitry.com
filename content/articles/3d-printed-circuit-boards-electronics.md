@@ -2,65 +2,70 @@
 title: "3D Printed Circuit Boards Electronics: Embedding Circuits Directly Into Smart Products"
 date: 2026-07-03T06:04:20-06:00
 draft: false
-description: "How 3D printed circuit boards electronics are moving beyond prototyping to embed circuits inside products, cutting assembly steps and time-to-market."
+description: "How 3D printed circuit boards electronics work: aerosol jet and inkjet deposition, multi-material PCB printing, embedded circuits, and current limitations."
 image: /images/articles/3d-printed-circuit-boards-electronics.jpg
 keywords: ["3D printed circuit boards electronics", "embedded electronics manufacturing", "aerosol jet printing circuits", "multi-material PCB printing"]
 ---
 
-The conversation around 3D printed circuit boards electronics has shifted. For years, the dominant use case was rapid prototyping — spinning up a test board in hours rather than waiting weeks for a PCB fab house. That capability still matters, but it's no longer the ceiling. Manufacturers in aerospace, medical devices, and consumer electronics are now embedding printed circuits directly into structural parts, eliminating discrete assembly stages and compressing product development cycles in ways that traditional PCB workflows simply cannot match.
+The conversation around 3D printed circuit boards electronics usually starts with rapid prototyping: making a test board in-house rather than ordering one from a PCB fab house. That capability still matters, but the more interesting use is printing circuits directly onto, or into, three-dimensional parts, which removes some of the separate boards and connectors a conventional design needs.
 
 ## How 3D Printed Electronics Actually Work
 
-Before getting into applications, it helps to be clear about what "3D printed circuit boards electronics" actually means in practice, because the term covers several distinct processes with very different capabilities.
+Before getting into applications, it helps to be clear about what "3D printed circuit boards electronics" means in practice, because the term covers several distinct processes with very different capabilities.
 
 ### Aerosol Jet and Inkjet Deposition
 
-The most capable systems for fine-feature electronic printing use either aerosol jet or inkjet heads to deposit conductive inks — typically silver nanoparticle suspensions — onto substrates. Aerosol jet printing (developed commercially by Optomec) atomizes the ink into a focused beam that can be directed across non-planar surfaces without losing resolution. This matters enormously when the goal is printing traces onto a curved housing or a molded component rather than a flat board.
+Optomec's Aerosol Jet process atomizes an ink, for example a silver nanoparticle ink, into a dense mist of droplets 2 to 5 microns in diameter. A sheath gas focuses that mist into a tight stream, and the stream stays in focus for up to 5 mm between the nozzle and the part. That long focal length is what lets the process hold its feature resolution on non-planar surfaces. Printed features range from 10 microns to a few millimeters. This matters when the goal is printing traces onto a curved housing or a molded component rather than a flat board.
 
-Inkjet-based systems work well on flat or near-flat surfaces and can achieve line widths in the 20–50 micron range with the right ink and substrate combination. After deposition, the ink is sintered — either thermally or with photonic curing — to drive off solvents and establish the conductive metallic network.
+Inkjet works differently: the nozzle must sit very close to the substrate, so it suits flat surfaces. Typical inkjet resolution in printed electronics is around 50 microns.
 
-Neither process matches the sub-10-micron resolution of photolithography used in high-density PCB fabrication. For fine-pitch BGA components or dense digital logic, traditional processes still win on resolution. But for antennas, sensors, interconnects, and low-to-medium complexity circuits, printed electronics are well within spec.
+Printed conductors also offer lower conductivity than conventional ones, so for dense digital logic and high-current paths, traditional PCB processes still win. For antennas, sensors and interconnects, printed electronics are already in use: Aerosol Jet has been used to print antennas for smartphones, sensors for the IoT market, and strain sensors on turbine blades.
 
 ### Multi-Material PCB Printing
 
-Systems like the Nano Dimension DragonFly use inkjet heads to simultaneously deposit conductive and dielectric materials, building up a complete multilayer circuit board in a single print run. The dielectric ink forms the insulating substrate between layers while the conductive ink forms traces and vias. This approach produces boards with comparable layer counts to conventionally fabricated PCBs and can incorporate blind and buried vias that would require multiple lamination steps in traditional manufacturing.
+The Nano Dimension DragonFly IV uses piezo drop-on-demand inkjet with two printheads, one for a silver nanoparticle conductive ink and one for a dielectric ink. Nano Dimension describes it as a multi-material, multi-layer printer that generates entire circuits in one step, with the two inks printed and cured together. The dielectric ink is a UV-curable acrylate that provides both insulation and structure, while the conductive ink forms the traces. The published minimums are 100 micron traces with 150 micron spacing and 200 micron vias.
 
-For lower-fidelity applications, [conductive filament 3D printing](/3dprintcircuitry.com/conductive-filament-guide/) provides a more accessible entry point. Carbon-loaded or metal-filled FDM filaments can be extruded alongside standard materials, though bulk resistivity is orders of magnitude higher than sintered silver ink — typically limiting these traces to heating elements, touch sensors, or shielding rather than signal-carrying interconnects.
+For lower-fidelity applications, conductive filament provides a more accessible entry point. Carbon-loaded FDM filaments can be extruded on ordinary desktop printers, though their resistivity is many orders of magnitude higher than metal. Protopasta's carbon black conductive PLA, for example, is listed at 30 ohm-cm along the printed layers, against roughly 1.68 × 10⁻⁶ ohm-cm for copper. The manufacturer suggests it for low-voltage circuitry and touch sensor projects rather than conventional signal traces.
 
 ## Embedding Electronics: The Structural Integration Approach
 
-The more significant departure from conventional electronics manufacturing isn't just printing flat circuits faster — it's printing circuits *inside* parts.
+The more significant departure from conventional electronics manufacturing is not printing flat circuits faster. It is putting circuits on the part itself.
 
-Structural electronics, sometimes called molded interconnect devices (MIDs) in their injection-molded form, aim to place circuitry within or on the surface of a three-dimensional structure. With additive manufacturing, this becomes considerably more flexible. A print can be paused mid-layer, discrete components placed into cavities by a pick-and-place head or by hand, and then the structure continued over the top. The result is a part where the electronics are mechanically integrated rather than bolted on afterward.
+The established version of this idea is the molded interconnect device (MID): an injection-molded thermoplastic part with integrated electronic circuit traces. Aerosol jet, inkjet or screen printing can be used to apply the traces, and aerosol jet printing is reported to deliver the most reliable results on an arbitrarily shaped part.
 
 This has concrete engineering implications:
 
-- **Connector elimination**: Circuits that terminate inside the structure don't need board-to-board connectors, which are common failure points and add both cost and volume.
-- **EMI shielding**: Conductive shells or Faraday-cage geometries can be printed as part of the structure rather than added as separate metal enclosures.
-- **Reduced z-height**: Stacking a PCB under a housing adds thickness. An embedded circuit eliminates that stack-up entirely.
+- **Connector elimination**: Circuits that run on the structure itself need fewer board-to-board connectors, which add both cost and volume.
+- **Reduced z-height**: Stacking a PCB under a housing adds thickness. A circuit printed on the housing avoids that stack-up.
 
-Wearable devices and medical implantables are logical early adopters. Conforming a rigid PCB to a body-worn form factor requires mechanical linkages and flex PCBs. A directly printed circuit follows the geometry of the product without those intermediary components.
-
-For more on combining structural and electronic layers, see [multi-material 3D printing for electronics integration](/3dprintcircuitry.com/multi-material-3d-printing-electronics/).
+Body-worn devices are a logical fit. Published examples of the Aerosol Jet process include heaters printed onto bandages for wound treatment.
 
 ## Assembly Step Reduction: Where the Time Savings Come From
 
-Traditional electronics manufacturing involves a long sequence of discrete steps: bare board fabrication, solder paste application, component placement, reflow, inspection, housing fabrication, and then mechanical assembly joining the electronics to the product. Each handoff between steps is a potential delay, a quality escape, or a cost center.
+Traditional electronics manufacturing involves a sequence of discrete steps: bare board fabrication, component placement and soldering, inspection, housing fabrication, and then mechanical assembly joining the electronics to the product. Each handoff between steps is a potential delay or cost.
 
-Embedded 3D printed circuit boards electronics compress this chain. When the circuit and housing are built together, solder paste and reflow are replaced by the print process itself (for the interconnect traces, at minimum). Housing fabrication and electronics assembly collapse into a single workflow.
-
-The reduction isn't always dramatic — surface-mount components still need to be placed and soldered in most configurations, and sintering adds process time — but the logistics simplification is real. A single operator running a multi-material printer can produce integrated electromechanical assemblies that would otherwise require coordination across a PCB fab, a sheet metal shop, and an assembly line.
+Printing the interconnect onto the housing can shorten this chain. The reduction is not always dramatic, since components still need to be placed and attached, and printed inks need a curing or sintering step, but there are fewer separate parts to source and join.
 
 ## Time-to-Market Considerations
 
-The lead time advantage of printed electronics is most visible for low-to-medium volume production where tooling costs and minimum order quantities dominate the economics. A traditional PCB order in small quantities carries a setup fee, a fabrication cycle of days to weeks depending on layer count and specs, and a shipping leg. A printed board can be ready in hours from a finalized design file.
+The lead time advantage of printed electronics is most visible for prototypes and low volumes. Nano Dimension's claim for the DragonFly IV is that it turns ideas into fully functional circuits within hours.
 
-For custom electronics — instrumentation, embedded sensors, one-off control boards — this matters. An engineer can iterate through three hardware revisions in the time it would take to receive a single traditionally fabricated board. That compression doesn't just speed up development; it changes what's economically viable to build. Low-volume, highly customized smart objects that wouldn't justify a traditional production run become feasible when the tooling cost is effectively zero.
+For custom electronics such as instrumentation, embedded sensors and one-off control boards, this matters. An engineer can test a hardware revision without waiting on an outside order, and no tooling is needed to change the design.
 
 ## Current Limitations Worth Knowing
 
-Printed electronics aren't a universal replacement. Component density ceilings, the need for sintering steps, and limited availability of printable passive components mean that complex digital designs still route through conventional PCB manufacturing. Reliability data for printed circuits in high-vibration or high-thermal-cycling environments is still accumulating.
+Printed electronics are not a universal replacement. Lower conductivity, coarser feature sizes than conventional fabrication, and the need for curing or sintering steps mean that complex digital designs still route through conventional PCB manufacturing.
 
-The honest picture is one of complementary processes: 3D printed circuit boards electronics excel where geometry, customization, and integration matter more than maximum trace density. As ink formulations improve and multi-material machines gain precision, the ceiling for printed electronics rises — but it's rising incrementally, not overnight.
+The honest picture is one of complementary processes: 3D printed circuit boards electronics fit where geometry, customization and integration matter more than maximum trace density. Engineers who understand where printed electronics fit, and use them accordingly, will get more from them than those who treat them as a blanket substitute for established PCB manufacturing.
 
-The current moment rewards engineers who understand where printed electronics fit and use them accordingly, rather than treating them as a blanket substitute for established PCB manufacturing.
+## Sources
+
+- [I-Connect007: A Twist on Printed Electronics, Printing on 3D Shapes (Optomec interview)](https://iconnect007.com/article/104716/a-twist-on-printed-electronics-printing-on-3d-shapes/104719/pcb)
+- [Wikipedia: Printed electronics](https://en.wikipedia.org/wiki/Printed_electronics)
+- [Nano Dimension: DragonFly IV specifications](https://www.nano-di.com/dragonfly-iv)
+- [Nano Dimension: AME materials](https://www.nano-di.com/ame-materials)
+- [Protopasta: Conductive PLA technical data](https://www.proto-pasta.com/pages/conductive-pla)
+- [Wikipedia: Electrical resistivity and conductivity](https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity)
+- [Wikipedia: Molded interconnect device](https://en.wikipedia.org/wiki/Molded_interconnect_device)
+
+Fact-checked 2026-11-21
