@@ -15,7 +15,7 @@ title = "3D Print Circuitry"
 siteName      = "3D Print Circuitry"
 logoHtml      = '3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">CIRCUITRY</span>'
 tagline       = "Additive Electronics — From Trace to Device."
-description   = "3D Print Circuitry — additive manufacturing for electronics, covering printed enclosures, antennas, connectors, coils, conductive inks, and a directory connecting engineers to suppliers."
+description   = "3D Print Circuitry is a PrintWire network site about 3D printed electronics. PrintWire passes quote requests to specialised manufacturers and returns pricing. PrintWire does not manufacture parts itself."
 keywords      = "3D printed electronics, additive electronics, printed PCB, aerosol jet printing, conductive ink, embedded components, conformal electronics, printed antennas, printed sensors"
 logoEmoji     = "⚡"
 contactEmail  = "maxdavisgroup@gmail.com"
