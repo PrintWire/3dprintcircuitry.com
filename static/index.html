@@ -29,9 +29,6 @@
     <nav class="ed-nav">
       <a href="index.html" class="active">News</a>
       <a href="/articles/">Research</a>
-      <a href="#suppliers">Suppliers</a>
-      <a href="#suppliers">Materials</a>
-      <a href="#suppliers">Bureaus</a>
       <a href="about.html">About</a>
     </nav>
     <button class="ed-theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">&#9790;</button>
@@ -57,12 +54,6 @@
       </div>
     </article>
 
-    <div class="ed-stats">
-      <div class="ed-stat"><div class="ed-stat-value">&lt;50&micro;m</div><div class="ed-stat-label">Trace Width</div></div>
-      <div class="ed-stat"><div class="ed-stat-value">Multilayer</div><div class="ed-stat-label">Boards</div></div>
-      <div class="ed-stat"><div class="ed-stat-value">48hr</div><div class="ed-stat-label">Prototyping</div></div>
-      <div class="ed-stat"><div class="ed-stat-value">38+</div><div class="ed-stat-label">Suppliers</div></div>
-    </div>
 
     <div class="ed-section-label" style="border-left:3px solid var(--accent);padding-left:0.6rem;">
       PrintWire Originals
@@ -74,7 +65,7 @@
 
     <div class="ed-section-label">
       Latest Industry News
-      <a href="#">View All &rarr;</a>
+      
     </div>
     <div class="ed-card-grid" id="newsGrid">
       <div style="grid-column: 1/-1; text-align:center; padding:2rem; color:var(--text-faint);">Loading latest news…</div>
@@ -92,117 +83,40 @@
       Applications We Cover
     </div>
     <div class="ed-card-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem;">
-      <a href="#" class="ed-card" style="text-align:center;">
+      <div class="ed-card" style="text-align:center;">
         <img class="ed-card-img" src="images/ci05_sensor_board.png" alt="PCB Structures">
         <div class="ed-card-body"><h3>PCB Structures</h3></div>
-      </a>
-      <a href="#" class="ed-card" style="text-align:center;">
+      </div>
+      <div class="ed-card" style="text-align:center;">
         <img class="ed-card-img" src="images/ci06_solder_macro.png" alt="Enclosures">
         <div class="ed-card-body"><h3>Enclosures</h3></div>
-      </a>
-      <a href="#" class="ed-card" style="text-align:center;">
+      </div>
+      <div class="ed-card" style="text-align:center;">
         <img class="ed-card-img" src="images/ci07_embedded_rf.png" alt="Connectors">
         <div class="ed-card-body"><h3>Connectors</h3></div>
-      </a>
-      <a href="#" class="ed-card" style="text-align:center;">
+      </div>
+      <div class="ed-card" style="text-align:center;">
         <img class="ed-card-img" src="images/ci08_wearable.png" alt="Antennas &amp; RF">
         <div class="ed-card-body"><h3>Antennas &amp; RF</h3></div>
-      </a>
-      <a href="#" class="ed-card" style="text-align:center;">
+      </div>
+      <div class="ed-card" style="text-align:center;">
         <img class="ed-card-img" src="images/ci09_pcb_macro.png" alt="Coils &amp; Inductors">
         <div class="ed-card-body"><h3>Coils &amp; Inductors</h3></div>
-      </a>
-      <a href="#" class="ed-card" style="text-align:center;">
+      </div>
+      <div class="ed-card" style="text-align:center;">
         <img class="ed-card-img" src="images/c06_sensor_module.png" alt="Sensor Mounts">
         <div class="ed-card-body"><h3>Sensor Mounts</h3></div>
-      </a>
+      </div>
     </div>
 
-    <div class="ed-load-more">
-      <button>Load More Articles</button>
-    </div>
 
   </div>
 
   <aside class="ed-sidebar">
 
-    <div class="ed-sidebar-block ed-newsletter">
-      <h4>Newsletter</h4>
-      <p>Printed-electronics breakthroughs, conductive-ink research, and RF projects — delivered monthly. No spam.</p>
-      <form action="https://api.web3forms.com/submit" method="POST" onsubmit="this.querySelector('button').textContent='Subscribed!';this.querySelector('button').disabled=true;">
-        <input type="hidden" name="access_key" value="6f33053b-6d08-414b-9615-665f88c98da8">
-        <input type="hidden" name="subject" value="Newsletter Signup — 3dprintcircuitry.com">
-        <input type="hidden" name="from_name" value="Newsletter Signup">
-        <input type="email" name="email" placeholder="your@email.com" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
 
-    <div class="ed-sidebar-block" id="suppliers">
-      <h4>Suppliers &amp; Connections</h4>
-      <div class="ed-popular-item">
-        <div>
-          <h3><a href="#">Printers &amp; Systems</a></h3>
-          <div class="ed-popular-meta">Multi-material, aerosol-jet &amp; FFF platforms · 12 suppliers</div>
-        </div>
-      </div>
-      <div class="ed-popular-item">
-        <div>
-          <h3><a href="#">Conductive Inks</a></h3>
-          <div class="ed-popular-meta">Silver, copper &amp; carbon nanotube inks · 17 suppliers</div>
-        </div>
-      </div>
-      <div class="ed-popular-item">
-        <div>
-          <h3><a href="#">Substrates &amp; Dielectrics</a></h3>
-          <div class="ed-popular-meta">Flexible films, high-temp resins &amp; ceramics · 21 listed</div>
-        </div>
-      </div>
-      <div class="ed-popular-item">
-        <div>
-          <h3><a href="#">Service Bureaus</a></h3>
-          <div class="ed-popular-meta">Printed-electronics prototyping &amp; production · 24 listed</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="ed-sidebar-block">
-      <h4>Most Read</h4>
-      <div class="ed-popular-item">
-        <span class="ed-popular-num">1</span>
-        <div>
-          <h3><a href="#">Copper Nanoparticle Inks Hit 1M S/m After Photonic Sintering</a></h3>
-          <div class="ed-popular-meta">9.4K reads</div>
-        </div>
-      </div>
-      <div class="ed-popular-item">
-        <span class="ed-popular-num">2</span>
-        <div>
-          <h3><a href="#">Aerosol-Jet Printing Puts 20µm Traces on Curved Housings</a></h3>
-          <div class="ed-popular-meta">8.0K reads</div>
-        </div>
-      </div>
-      <div class="ed-popular-item">
-        <span class="ed-popular-num">3</span>
-        <div>
-          <h3><a href="#">Fully Printed Multilayer Boards Pass Thermal Cycling</a></h3>
-          <div class="ed-popular-meta">6.5K reads</div>
-        </div>
-      </div>
-      <div class="ed-popular-item">
-        <span class="ed-popular-num">4</span>
-        <div>
-          <h3><a href="#">Embedded Antennas Cut RF Module Footprint by 40%</a></h3>
-          <div class="ed-popular-meta">5.8K reads</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="ed-sidebar-block" style="text-align:center; color: var(--text-faint); font-size: 0.75rem; padding: 2.5rem 1rem;">
-      <div style="border: 1px dashed var(--border); border-radius: 4px; padding: 2rem 1rem;">
-        Ad Space<br>300×250
-      </div>
-    </div>
 
     <div class="ed-sidebar-block">
       <h4>PrintWire Network</h4>
@@ -218,11 +132,6 @@
       </div>
     </div>
 
-    <div class="ed-sidebar-block" style="background: linear-gradient(135deg, rgba(227,179,65,0.12), rgba(227,179,65,0.04)); border-color: var(--border-accent);">
-      <h4 style="color: var(--accent);">List Your Shop</h4>
-      <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem; line-height: 1.5;">Printed-electronics shop, ink supplier, or service bureau? Get listed in the directory.</p>
-      <a href="contact.html" style="display:block;text-align:center;padding:0.65rem;background:var(--accent);border-radius:4px;color:#0B1220;font-weight:600;font-size:0.8rem;transition:background 0.25s;" onmouseover="this.style.background='var(--accent-dark)'" onmouseout="this.style.background='var(--accent)'">Get in Touch</a>
-    </div>
 
   </aside>
 </div>
@@ -245,28 +154,28 @@
     <div>
       <h4>Coverage</h4>
       <ul>
-        <li><a href="#">Printed Electronics</a></li>
-        <li><a href="#">Conductive Inks</a></li>
-        <li><a href="#">RF &amp; Antennas</a></li>
-        <li><a href="#">Enclosures</a></li>
+        <li>Printed Electronics</li>
+        <li>Conductive Inks</li>
+        <li>RF &amp; Antennas</li>
+        <li>Enclosures</li>
         <li><a href="advertise.html">Advertise With Us</a></li>
       </ul>
     </div>
     <div>
       <h4>Applications</h4>
       <ul>
-        <li><a href="#">PCB Structures</a></li>
-        <li><a href="#">Enclosures</a></li>
-        <li><a href="#">Connectors</a></li>
-        <li><a href="#">Coils &amp; Inductors</a></li>
+        <li>PCB Structures</li>
+        <li>Enclosures</li>
+        <li>Connectors</li>
+        <li>Coils &amp; Inductors</li>
       </ul>
     </div>
   </div>
   <div class="ed-footer-bottom">
     <span>&copy; 2026 3D Print Circuitry. Part of the <a href="https://3dprint.space" style="color:var(--accent);">PrintWire</a> network.</span>
     <span>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
     </span>
   </div>
 </footer>
